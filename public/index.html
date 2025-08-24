@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script type="text/javascript" src="app.js" defer></script>
+</head>
+<body>
+
+    <nav id="sidebar">
+        <ul>
+            <li>
+                <span class="logo">porsuppakarn</span>
+                <button onclick=toggleSidebar() id="toggle-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="m313-480 155 156q11 11 11.5 27.5T468-268q-11 11-28 11t-28-11L228-452q-6-6-8.5-13t-2.5-15q0-8 2.5-15t8.5-13l184-184q11-11 27.5-11.5T468-692q11 11 11 28t-11 28L313-480Zm264 0 155 156q11 11 11.5 27.5T732-268q-11 11-28 11t-28-11L492-452q-6-6-8.5-13t-2.5-15q0-8 2.5-15t8.5-13l184-184q11-11 27.5-11.5T732-692q11 11 11 28t-11 28L577-480Z"/></svg>
+                </button>
+            </li>
+            <li class="active">
+                <a href="index.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M240-200h120v-200q0-17 11.5-28.5T400-440h160q17 0 28.5 11.5T600-400v200h120v-360L480-740 240-560v360Zm-80 0v-360q0-19 8.5-36t23.5-28l240-180q21-16 48-16t48 16l240 180q15 11 23.5 28t8.5 36v360q0 33-23.5 56.5T720-120H560q-17 0-28.5-11.5T520-160v-200h-80v200q0 17-11.5 28.5T400-120H240q-33 0-56.5-23.5T160-200Zm320-270Z"/></svg>
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="awards.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M480-520q33 0 56.5-23.5T560-600q0-33-23.5-56.5T480-680q-33 0-56.5 23.5T400-600q0 33 23.5 56.5T480-520ZM280-120v-80h160v-124q-49-11-87.5-41.5T296-442q-75-9-125.5-65.5T120-640v-40q0-33 23.5-56.5T200-760h80v-80h400v80h80q33 0 56.5 23.5T840-680v40q0 76-50.5 132.5T664-442q-18 46-56.5 76.5T520-324v124h160v80H280Zm0-408v-152h-80v40q0 38 22 68.5t58 43.5Zm200 128q50 0 85-35t35-85v-240H360v240q0 50 35 85t85 35Zm200-128q36-13 58-43.5t22-68.5v-40h-80v152Zm-200-52Z"/></svg>
+                    <span>Awards</span>
+                </a>
+            </li>
+            <li>
+                <a href="photoshoots.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M240-80q-33 0-56.5-23.5T160-160v-640q0-33 23.5-56.5T240-880h480q33 0 56.5 23.5T800-800v640q0 33-23.5 56.5T720-80H240Zm0-80h480v-640h-80v280l-100-60-100 60v-280H240v640Zm40-80h400L545-420 440-280l-65-87-95 127Zm-40 80v-640 640Zm200-360 100-60 100 60-100-60-100 60Z"/></svg>
+                    <span>Photoshoots</span>
+                </a>
+            </li>
+            <li>
+                <a href="discography.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M400-240q50 0 85-35t35-85v-280h120v-80H460v256q-14-8-29-12t-31-4q-50 0-85 35t-35 85q0 50 35 85t85 35Zm80 160q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"/></svg>
+                    <span>Discography</span>
+                </a>
+            </li>
+            <li>
+                <a href="filmography.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="m160-800 80 160h120l-80-160h80l80 160h120l-80-160h80l80 160h120l-80-160h120q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800Zm0 240v320h640v-320H160Zm0 0v320-320Z"/></svg>
+                    <span>Filmography</span>
+                </a>
+            </li>
+            <li>
+                <a href="shows.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="m160-800 80 160h120l-80-160h80l80 160h120l-80-160h80l80 160h120l-80-160h120q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800Zm0 240v320h640v-320H160Zm0 0v320-320Z"/></svg>
+                    <span>Shows</span>
+                </a>
+            </li>
+            <li>
+                <a href="calendar.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="m160-800 80 160h120l-80-160h80l80 160h120l-80-160h80l80 160h120l-80-160h120q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800Zm0 240v320h640v-320H160Zm0 0v320-320Z"/></svg>
+                    <span>Schedule</span>
+                </a>
+            </li>
+            <li>
+                <a href="live.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="m380-340 280-180-280-180v360Zm-60 220v-80H160q-33 0-56.5-23.5T80-280v-480q0-33 23.5-56.5T160-840h640q33 0 56.5 23.5T880-760v480q0 33-23.5 56.5T800-200H640v80H320ZM160-280h640v-480H160v480Zm0 0v-480 480Z"/></svg>
+                    <span>Live</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="container">
+            <section id="about">
+                <div class="about-img">
+                    <img src="assets/profile.jpeg">
+                </div>
+                <div class="about-text">
+                    <h2>ศุภการ จิรโชติกุล<br />Suppakarn Jirachotikul</h2>
+                    <div class="exp-area">
+                        <p class="exp">วันเกิด:<span>17 ตุลาคม 2002</span></p>
+                        <p class="exp">Hashtag:<span><a href="https://x.com/hashtag/porsuppakarn?src=hashtag_click" target="_blank" rel="noopener noreferrer">#porsuppakarn</a></span></p>
+                        <p class="exp">ชื่อแฟนคลับ:<span><a href="https://x.com/hashtag/องครักษ์แห่งดินแดนน้ำแข็ง?src=hashtag_click" target="_blank" rel="noopener noreferrer">#องครักษ์แห่งดินแดนน้ำแข็ง</a></span></p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="container">
+            <h2>Social Media</h2>
+            <div class="contact-con">
+				<div class="contact-item">
+					<img
+                        src="./assets/icons/instagram.png"
+                        alt="My Instagram profile"
+                        class="contact-icon"
+                        onclick="location.href='https://www.instagram.com/porsuppakarn'" />
+					<p><a href="https://www.instagram.com/porsuppakarn" target="_blank" rel="noopener noreferrer">porsuppakarn</a></p>
+				</div>
+				<div class="contact-item">
+					<img
+                        src="./assets/icons/twitter.png"
+                        alt="My Twitter profile"
+                        class="contact-icon"
+                        onclick="location.href='https://x.com/porsuppakarn'" />
+					<p><a href="https://x.com/porsuppakarn" target="_blank" rel="noopener noreferrer">@porsuppakarn</a></p>
+				</div>
+                <div class="contact-item">
+					<img
+                        src="./assets/icons/tiktok.png"
+                        alt="My Tiktok profile"
+                        class="contact-icon"
+                        onclick="location.href='https://www.tiktok.com/@porsuppakarn'" />
+					<p><a href="https://www.tiktok.com/@porsuppakarn" target="_blank" rel="noopener noreferrer">porsuppakarn</a></p>
+				</div>
+                <div class="contact-item">
+					<img
+                        src="./assets/icons/weibo.png"
+                        alt="My Weibo profile"
+                        class="contact-icon"
+                        onclick="location.href='https://weibo.com/u/7910928995'" />
+					<p><a href="https://weibo.com/u/7910928995" target="_blank" rel="noopener noreferrer">Porsuppakarn</a></p>
+				</div>
+			</div>
+        </div>
+
+        <!-- <div class="container">
+            <h2>Contact For Work</h2>
+            <div class="contact-con">
+                <div class="contact-item">
+                    <img
+                        src="./assets/icons/phone-call.png"
+                        alt="Email icon"
+                        class="contact-icon"/>
+                    <p>0800835228 (Sherlyn)<br/>0959199666 (Aoftion)</p>
+                </div>
+                <div class="contact-item">
+                    <img
+                        src="./assets/icons/line.png"
+                        alt="Line icon"
+                        class="contact-icon"/>
+                    <p><a>dmdmandee | @mandeework</a></p>
+                </div>
+            </div>
+        </div> -->
+
+        <div id="footer-container"></div>
+
+    </main>
+    
+</body>
+</html>

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discography</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script type="text/javascript" src="app.js" defer></script>
+</head>
+<body>
+
+    <nav id="sidebar">
+        <ul>
+            <li>
+                <span class="logo">porsuppakarn</span>
+                <button onclick=toggleSidebar() id="toggle-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="m313-480 155 156q11 11 11.5 27.5T468-268q-11 11-28 11t-28-11L228-452q-6-6-8.5-13t-2.5-15q0-8 2.5-15t8.5-13l184-184q11-11 27.5-11.5T468-692q11 11 11 28t-11 28L313-480Zm264 0 155 156q11 11 11.5 27.5T732-268q-11 11-28 11t-28-11L492-452q-6-6-8.5-13t-2.5-15q0-8 2.5-15t8.5-13l184-184q11-11 27.5-11.5T732-692q11 11 11 28t-11 28L577-480Z"/></svg>
+                </button>
+            </li>
+            <li>
+                <a href="index.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M240-200h120v-200q0-17 11.5-28.5T400-440h160q17 0 28.5 11.5T600-400v200h120v-360L480-740 240-560v360Zm-80 0v-360q0-19 8.5-36t23.5-28l240-180q21-16 48-16t48 16l240 180q15 11 23.5 28t8.5 36v360q0 33-23.5 56.5T720-120H560q-17 0-28.5-11.5T520-160v-200h-80v200q0 17-11.5 28.5T400-120H240q-33 0-56.5-23.5T160-200Zm320-270Z"/></svg>
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="awards.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M480-520q33 0 56.5-23.5T560-600q0-33-23.5-56.5T480-680q-33 0-56.5 23.5T400-600q0 33 23.5 56.5T480-520ZM280-120v-80h160v-124q-49-11-87.5-41.5T296-442q-75-9-125.5-65.5T120-640v-40q0-33 23.5-56.5T200-760h80v-80h400v80h80q33 0 56.5 23.5T840-680v40q0 76-50.5 132.5T664-442q-18 46-56.5 76.5T520-324v124h160v80H280Zm0-408v-152h-80v40q0 38 22 68.5t58 43.5Zm200 128q50 0 85-35t35-85v-240H360v240q0 50 35 85t85 35Zm200-128q36-13 58-43.5t22-68.5v-40h-80v152Zm-200-52Z"/></svg>
+                    <span>Awards</span>
+                </a>
+            </li>
+            <li>
+                <a href="photoshoots.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M240-80q-33 0-56.5-23.5T160-160v-640q0-33 23.5-56.5T240-880h480q33 0 56.5 23.5T800-800v640q0 33-23.5 56.5T720-80H240Zm0-80h480v-640h-80v280l-100-60-100 60v-280H240v640Zm40-80h400L545-420 440-280l-65-87-95 127Zm-40 80v-640 640Zm200-360 100-60 100 60-100-60-100 60Z"/></svg>
+                    <span>Photoshoots</span>
+                </a>
+            </li>
+            <li class="active">
+                <a href="discography.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M400-240q50 0 85-35t35-85v-280h120v-80H460v256q-14-8-29-12t-31-4q-50 0-85 35t-35 85q0 50 35 85t85 35Zm80 160q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"/></svg>
+                    <span>Discography</span>
+                </a>
+            </li>
+            <li>
+                <a href="filmography.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="m160-800 80 160h120l-80-160h80l80 160h120l-80-160h80l80 160h120l-80-160h120q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800Zm0 240v320h640v-320H160Zm0 0v320-320Z"/></svg>
+                    <span>Filmography</span>
+                </a>
+            </li>
+            <li>
+                <a href="shows.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="m160-800 80 160h120l-80-160h80l80 160h120l-80-160h80l80 160h120l-80-160h120q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800Zm0 240v320h640v-320H160Zm0 0v320-320Z"/></svg>
+                    <span>Shows</span>
+                </a>
+            </li>
+            <li>
+                <a href="calendar.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="m160-800 80 160h120l-80-160h80l80 160h120l-80-160h80l80 160h120l-80-160h120q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800Zm0 240v320h640v-320H160Zm0 0v320-320Z"/></svg>
+                    <span>Schedule</span>
+                </a>
+            </li>
+            <li>
+                <a href="live.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="m380-340 280-180-280-180v360Zm-60 220v-80H160q-33 0-56.5-23.5T80-280v-480q0-33 23.5-56.5T160-840h640q33 0 56.5 23.5T880-760v480q0 33-23.5 56.5T800-200H640v80H320ZM160-280h640v-480H160v480Zm0 0v-480 480Z"/></svg>
+                    <span>Live</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="container">
+            <!-- <h2>รางวัลที่ได้รับ</h2> -->
+
+            <section id="singles">
+                <h1 class="title">Singles</h1>
+                <div class="content-con">
+                    <div class="content-item"><a href="https://youtu.be/bpe9zQ5zDDc" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://images.genius.com/9a7dce0598f3c8ed9d3532a739b61fb7.1000x1000x1.jpg" alt><p class="video-title">YESTERDAY TODAY TOMORROW | TRINITY & 4NOLOGUE TRAINEE</p></a></div>
+                    <div class="content-item"><a href="https://dvi.lnk.to/Sugar" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://pbs.twimg.com/media/Fnp7kO-aUAEb-4W?format=jpg&name=medium" alt><p class="video-title">Sugar</p></a></div>
+                    <div class="content-item"><a href="https://orcd.co/psycchicfever_dvi" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://pbs.twimg.com/media/FoK0-r2acAAGlkQ?format=jpg&name=medium" alt><p class="video-title">To The Top | PSYCHIC FEVER feat. DVI</p></a></div>
+                    <div class="content-item"><a href="https://dvi.lnk.to/SecondChance" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://pbs.twimg.com/media/F1PrFJdaEAAvqUW?format=jpg&name=large" alt><p class="video-title">Second Chance</p></a></div>
+                    <div class="content-item"><a href="https://dvi.lnk.to/ClosedFriend" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://pbs.twimg.com/media/GFBnObCbUAAXer5?format=jpg&name=4096x4096" alt><p class="video-title">เพื่อน (แอบ) รัก - Close(d) Friend</p></a></div>
+                    <div class="content-item"><a href="https://lnkfi.re/PerfectMatchDmdGen4" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://pbs.twimg.com/media/GhvGt1DbwAArGN4?format=jpg&name=large" alt><p class="video-title">Perfect Match | DMD Gen4</p></a></div>
+                    <div class="content-item"><a href="https://lnkfi.re/GlaiJai" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://pbs.twimg.com/media/GidVC7ybcAEnwf7?format=jpg&name=large" alt><p class="video-title">ใกล้ใจ | OST.กี่หมื่นฟ้า</p></a></div>
+
+                </div>
+            </section>
+
+            <section id="YESTERDAYTODAYTOMORROW">
+                <h1 class="title">YESTERDAY TODAY TOMORROW | TRINITY & 4NOLOGUE TRAINEE</h1>
+                <div class="content-con">
+                    <div class="content-item"><a href="https://youtu.be/bpe9zQ5zDDc" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/bpe9zQ5zDDc/maxresdefault.jpg" alt><p class="video-title">OFFICIAL MV</p></a></div>
+                    <div class="content-item"><a href="https://youtu.be/X8lmj6mkv-M" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/X8lmj6mkv-M/maxresdefault.jpg" alt><p class="video-title">MV MAKING FILM</p></a></div>
+                </div>
+            </section>
+
+            <section id="Sugar">
+                <h1 class="title">Sugar | DVI</h1>
+                <div class="content-con">
+                    <div class="content-item"><a href="https://youtu.be/3yuSwj11pqE" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/3yuSwj11pqE/maxresdefault.jpg" alt><p class="video-title">DVI 🦋 ‘Sugar’ Concept Film - Por</p></a></div>
+                    <div class="content-item"><a href="https://youtu.be/hQEhEqMR6nA" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/hQEhEqMR6nA/maxresdefault.jpg" alt><p class="video-title">DVI 🦋 ‘Sugar’ Official M/V Teaser</p></a></div>
+                    <div class="content-item"><a href="https://youtu.be/BvXbFJ3GrUw" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/BvXbFJ3GrUw/maxresdefault.jpg" alt><p class="video-title">DVI 🦋 ‘Sugar’ Official M/V</p></a></div>
+                    <div class="content-item"><a href="https://youtu.be/ZoTNLqN4piY" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/ZoTNLqN4piY/maxresdefault.jpg" alt><p class="video-title">DVI 🦋 Making of ‘Sugar’ M/V</p></a></div>
+                </div>
+            </section>
+
+            <section id="ToTheTop">
+                <h1 class="title">To The Top | PSYCHIC FEVER feat. DVI</h1>
+                <div class="content-con">
+                    <div class="content-item"><a href="https://youtu.be/0xRa0DwkOvw" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/0xRa0DwkOvw/maxresdefault.jpg" alt><p class="video-title">OFFICIAL MV</p></a></div>
+                    <div class="content-item"><a href="" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="" alt><p class="video-title"></p></a></div>
+                    <div class="content-item"><a href="" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="" alt><p class="video-title"></p></a></div>
+                </div>
+            </section>
+
+            <section id="SecondChance">
+                <h1 class="title">Second Chance | DVI</h1>
+                <div class="content-con">
+                    <div class="content-item"><a href="https://youtu.be/H7FP-xqrrJY" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/H7FP-xqrrJY/maxresdefault.jpg" alt><p class="video-title">DVI 🦋 ‘Second Chance’ Official M/V Teaser</p></a></div>
+                    <div class="content-item"><a href="https://youtu.be/57O1sPt22PE" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/57O1sPt22PE/maxresdefault.jpg" alt><p class="video-title">DVI 🦋 ‘Second Chance’ Official M/V</p></a></div>
+                    <div class="content-item"><a href="https://youtu.be/CLd8PfkKCDU" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/CLd8PfkKCDU/maxresdefault.jpg" alt><p class="video-title">DVI 🦋 Making of ‘Second Chance’ M/V</p></a></div>
+                    <div class="content-item"><a href="https://youtu.be/cXkeT6lClKA" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/cXkeT6lClKA/maxresdefault.jpg" alt><p class="video-title">DVI 🦋 ‘Second Chance’ | Performance Video</p></a></div>
+                    <div class="content-item"><a href="https://youtu.be/unYklP-NsN8" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/unYklP-NsN8/maxresdefault.jpg" alt><p class="video-title">‘Second Chance’ Self-Cam in Japan</p></a></div>
+                    <div class="content-item"><a href="https://youtu.be/f0sOcqvQqSQ" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/f0sOcqvQqSQ/maxresdefault.jpg" alt><p class="video-title">DVI ON BEAT 🦋🎵 | Second Chance - DVI | Dance Performance</p></a></div>
+                </div>
+            </section>
+
+            <section id="Close(d)Friend">
+                <h1 class="title">เพื่อน (แอบ) รัก - Close(d) Friend | DVI</h1>
+                <div class="content-con">
+                    <div class="content-item"><a href="https://youtu.be/eYZzdqcI91Q" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/eYZzdqcI91Q/maxresdefault.jpg" alt><p class="video-title">DVI 🦋 ‘เพื่อน (แอบ) รัก - Close(d) Friend’ Official M/V Teaser</p></a></div>
+                    <div class="content-item"><a href="https://youtu.be/uDAO04OQi8c" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/uDAO04OQi8c/maxresdefault.jpg" alt><p class="video-title">DVI 🦋 ‘เพื่อน (แอบ) รัก - Close(d) Friend’ Official M/V</p></a></div>
+                    <div class="content-item"><a href="https://youtu.be/zJJuHL1PajA" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/zJJuHL1PajA/maxresdefault.jpg" alt><p class="video-title">DVI 🦋 ‘เพื่อน (แอบ) รัก - Close(d) Friend’ Official M/V Reaction</p></a></div>
+                    <div class="content-item"><a href="https://youtu.be/Nv5SYStEOKY" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/Nv5SYStEOKY/maxresdefault.jpg" alt><p class="video-title">DVI 🦋 Making of ‘เพื่อน(แอบ)รัก - Close(d) Friend’ M/V</p></a></div>
+                    <div class="content-item"><a href="https://youtu.be/FDlhlNMjxrc" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/FDlhlNMjxrc/maxresdefault.jpg" alt><p class="video-title">DVI 🦋 Behind The Song ‘เพื่อน(แอบ)รัก - Close(d) Friend’</p></a></div>
+                    <div class="content-item"><a href="https://youtu.be/3wFaK8wQ2ss" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/3wFaK8wQ2ss/maxresdefault.jpg" alt><p class="video-title">DVI ON BEAT 🦋🎵 | ‘เพื่อน(แอบ)รัก - Close(d) Friend’</p></a></div>
+                </div>
+            </section>
+
+            <section id="PerfectMatch">
+                <h1 class="title">Perfect Match | DMD Gen4</h1>
+                <div class="content-con">
+                    <div class="content-item"><a href="https://youtu.be/x8H28zLYnIM" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/x8H28zLYnIM/maxresdefault.jpg" alt><p class="video-title">Perfect Match - DMD Gen4 | MV Teaser</p></a></div>
+                    <div class="content-item"><a href="https://youtu.be/Rnk8wYtEBsY" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/Rnk8wYtEBsY/maxresdefault.jpg" alt><p class="video-title">Perfect Match - DMD Gen4 | Official MV</p></a></div>
+                </div>
+            </section>
+
+            <section id="GlaiJai">
+                <h1 class="title">ใกล้ใจ | OST.กี่หมื่นฟ้า</h1>
+                <div class="content-con">
+                    <div class="content-item"><a href="https://youtu.be/sevERDj4naU" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/sevERDj4naU/maxresdefault.jpg" alt><p class="video-title">Por Suppakarn - ใกล้ใจ Ost. กี่หมื่นฟ้า Your Sky Series | Official MV</p></a></div>
+                </div>
+            </section>
+
+            <hr>
+
+            <section id="LAZiCON">
+                <h1 class="title">LAZ iCON</h1>
+                <div class="content-con">
+                    <div class="content-item"><a href="https://youtu.be/zRUrF2ucNDg" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/zRUrF2ucNDg/mqdefault.jpg" alt><p class="video-title">คนมันรัก</p></a></div>
+                    <div class="content-item"><a href="https://youtu.be/ESH11YaOiCg" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/ESH11YaOiCg/mqdefault.jpg" alt><p class="video-title">Shape of You</p></a></div>
+                    <div class="content-item"><a href="https://youtu.be/oDzVyqtvjJU" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/oDzVyqtvjJU/mqdefault.jpg" alt><p class="video-title">สองใจ</p></a></div>
+                    <div class="content-item"><a href="https://youtu.be/38FypwXjf0w" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/38FypwXjf0w/mqdefault.jpg" alt><p class="video-title">รู้งี้เป็นแฟนกันตั้งนานแล้ว</p></a></div>
+                    <div class="content-item"><a href="https://youtu.be/DHN_irFw7O4" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/DHN_irFw7O4/mqdefault.jpg" alt><p class="video-title">ที่หนึ่งในใจของเธอ” (Last One)</p></a></div>
+                    <div class="content-item"><a href="https://youtu.be/kNyUDqCu5MY" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/kNyUDqCu5MY/mqdefault.jpg" alt><p class="video-title">So What</p></a></div>
+                    <div class="content-item"><a href="https://youtu.be/nnDnNujgQD4" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/nnDnNujgQD4/mqdefault.jpg" alt><p class="video-title">PLEASE</p></a></div>
+                </div>
+            </section>
+
+            <section id="DVIONBEAT">
+                <h1 class="title">DVI ON BEAT 🦋🎵</h1>
+                <div class="content-con">
+                    <div class="content-item"><a href="https://youtu.be/ztiogPFuOsQ" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/ztiogPFuOsQ/maxresdefault.jpg" alt><p class="video-title">DVI ON BEAT 🦋🎵 | ISTJ - NCT DREAM 엔시티 드림 | Dance Cover</p></a></div>
+                    <div class="content-item"><a href="https://youtu.be/4f-snvC8lXo" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/4f-snvC8lXo/maxresdefault.jpg" alt><p class="video-title">DVI ON BEAT 🦋🎵 | 3D - Jung Kook 정국 ft. Jack Harlow | Dance Cover</p></a></div>
+                    <div class="content-item"><a href="https://youtu.be/Ax6m4JfE-TE" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/Ax6m4JfE-TE/maxresdefault.jpg" alt><p class="video-title">DVI ON BEAT 🦋🎵 | Christmas Special Cover 🎄</p></a></div>
+                </div>
+            </section>
+
+            <!-- <section id="WhyDVI">
+                <h1 class="title">‘Why DVI’ 🦋</h1>
+                <div class="content-con">
+                    <div class="content-item"><a href="https://youtu.be/ubrsSGAYkMA" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/ubrsSGAYkMA/maxresdefault.jpg" alt><p class="video-title">‘Why DVI’ 🦋 EP.1 - How it Begins</p></a></div>
+                    <div class="content-item"><a href="https://youtu.be/4AiAOG8Xvrs" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/4AiAOG8Xvrs/maxresdefault.jpg" alt><p class="video-title">‘Why DVI’ 🦋 EP.2 - Dream And Evolution</p></a></div>
+                    <div class="content-item"><a href="https://youtu.be/xJP6eqM9qLs" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/xJP6eqM9qLs/maxresdefault.jpg" alt><p class="video-title">‘Why DVI’ 🦋 EP.3 - The Butterfly Effect</p></a></div>
+                    <div class="content-item"><a href="https://youtu.be/rjARP06BQPM" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/rjARP06BQPM/maxresdefault.jpg" alt><p class="video-title">‘Why DVI’ 🦋 EP.4 - No Second Death</p></a></div>
+                </div>
+            </section> -->
+            
+
+            <section id="DMDcover">
+                <h1 class="title">DMD COVER</h1>
+                <div class="content-con">
+                    <div class="content-item"><a href="https://youtu.be/NT-ev7TygwQ" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/NT-ev7TygwQ/maxresdefault.jpg" alt><p class="video-title">SHEESH | DMD COVER</p></a></div>
+                    <div class="content-item"><a href="https://youtu.be/OFH_Alk1rUQ" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/OFH_Alk1rUQ/maxresdefault.jpg" alt><p class="video-title">MAESTRO | DMD DANCE COVER</p></a></div>
+                </div>
+            </section>
+
+            <section id="DMDFriendshipSS2">
+                <h1 class="title">DMD Friendship SS2</h1>
+                <div class="content-con">
+                    <div class="content-item"><a href="https://youtu.be/EivlqUBngEk" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/EivlqUBngEk/maxresdefault.jpg" alt><p class="video-title">แค่เธอ  | DMD Friendship SS2</p></a></div>
+                    <div class="content-item"><a href="https://youtu.be/F5Rl-NnAgjY?si=z1cCskpVMULtyG34&t=111" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/F5Rl-NnAgjY/maxresdefault.jpg" alt><p class="video-title">Perfect Match | DMD Friendship SS2</p></a></div>
+                    <div class="content-item"><a href="https://youtu.be/F5Rl-NnAgjY?si=Zf38xae3Lx0SYFfq&t=1508" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/F5Rl-NnAgjY/maxresdefault.jpg" alt><p class="video-title">FEAT | DMD Friendship SS2</p></a></div>
+                    <div class="content-item"><a href="https://youtu.be/V_NdpI3bCHE" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/V_NdpI3bCHE/maxresdefault.jpg" alt><p class="video-title">Knock Knock | DMD Friendship SS2</p></a></div>
+                </div>
+            </section>
+
+            <section id="recperf">
+                <h1 class="title">Recorded Performance</h1>
+                <div class="content-con">
+                    <div class="content-item"><a href="https://youtu.be/-PXLskFoBh4" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/-PXLskFoBh4/maxresdefault.jpg" alt><p class="video-title">ตามรอยพระราชา - Grammy Vocal Studio</p></a></div>
+                    <div class="content-item"><a href="https://fb.watch/xQf4bMaYGM/" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="assets/musics/SEPTAVE.jpg" alt><p class="video-title">วง SEPTAVE (เฉพาะกิจ)</p></a></div>
+                    <div class="content-item"><a href="https://youtu.be/ZzSG6l3jzk0" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/ZzSG6l3jzk0/maxresdefault.jpg" alt><p class="video-title">Chorus เพลง ความเงียบดังที่สุด | Getsunova Concert Atmosphere</p></a></div>
+                    <div class="content-item"><a href="https://youtu.be/fL99-DVvf4Q" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/fL99-DVvf4Q/maxresdefault.jpg" alt><p class="video-title">HIDDEN TRACK & IOU</p></a></div>
+                </div>
+            </section>
+
+        </div>
+
+        <div id="footer-container"></div>
+
+    </main>
+    
+</body>
+</html>

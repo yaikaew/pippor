@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shows</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="app.js" defer></script>
+</head>
+<body>
+
+    <nav id="sidebar">
+        <ul>
+            <li>
+                <span class="logo">porsuppakarn</span>
+                <button onclick=toggleSidebar() id="toggle-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="m313-480 155 156q11 11 11.5 27.5T468-268q-11 11-28 11t-28-11L228-452q-6-6-8.5-13t-2.5-15q0-8 2.5-15t8.5-13l184-184q11-11 27.5-11.5T468-692q11 11 11 28t-11 28L313-480Zm264 0 155 156q11 11 11.5 27.5T732-268q-11 11-28 11t-28-11L492-452q-6-6-8.5-13t-2.5-15q0-8 2.5-15t8.5-13l184-184q11-11 27.5-11.5T732-692q11 11 11 28t-11 28L577-480Z"/></svg>
+                </button>
+            </li>
+            <li>
+                <a href="index.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M240-200h120v-200q0-17 11.5-28.5T400-440h160q17 0 28.5 11.5T600-400v200h120v-360L480-740 240-560v360Zm-80 0v-360q0-19 8.5-36t23.5-28l240-180q21-16 48-16t48 16l240 180q15 11 23.5 28t8.5 36v360q0 33-23.5 56.5T720-120H560q-17 0-28.5-11.5T520-160v-200h-80v200q0 17-11.5 28.5T400-120H240q-33 0-56.5-23.5T160-200Zm320-270Z"/></svg>
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="awards.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M480-520q33 0 56.5-23.5T560-600q0-33-23.5-56.5T480-680q-33 0-56.5 23.5T400-600q0 33 23.5 56.5T480-520ZM280-120v-80h160v-124q-49-11-87.5-41.5T296-442q-75-9-125.5-65.5T120-640v-40q0-33 23.5-56.5T200-760h80v-80h400v80h80q33 0 56.5 23.5T840-680v40q0 76-50.5 132.5T664-442q-18 46-56.5 76.5T520-324v124h160v80H280Zm0-408v-152h-80v40q0 38 22 68.5t58 43.5Zm200 128q50 0 85-35t35-85v-240H360v240q0 50 35 85t85 35Zm200-128q36-13 58-43.5t22-68.5v-40h-80v152Zm-200-52Z"/></svg>
+                    <span>Awards</span>
+                </a>
+            </li>
+            <li>
+                <a href="photoshoots.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M240-80q-33 0-56.5-23.5T160-160v-640q0-33 23.5-56.5T240-880h480q33 0 56.5 23.5T800-800v640q0 33-23.5 56.5T720-80H240Zm0-80h480v-640h-80v280l-100-60-100 60v-280H240v640Zm40-80h400L545-420 440-280l-65-87-95 127Zm-40 80v-640 640Zm200-360 100-60 100 60-100-60-100 60Z"/></svg>
+                    <span>Photoshoots</span>
+                </a>
+            </li>
+            <!-- <li>
+                <a href="comercials.html">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M520-640v-160q0-17 11.5-28.5T560-840h240q17 0 28.5 11.5T840-800v160q0 17-11.5 28.5T800-600H560q-17 0-28.5-11.5T520-640ZM120-480v-320q0-17 11.5-28.5T160-840h240q17 0 28.5 11.5T440-800v320q0 17-11.5 28.5T400-440H160q-17 0-28.5-11.5T120-480Zm400 320v-320q0-17 11.5-28.5T560-520h240q17 0 28.5 11.5T840-480v320q0 17-11.5 28.5T800-120H560q-17 0-28.5-11.5T520-160Zm-400 0v-160q0-17 11.5-28.5T160-360h240q17 0 28.5 11.5T440-320v160q0 17-11.5 28.5T400-120H160q-17 0-28.5-11.5T120-160Zm80-360h160v-240H200v240Zm400 320h160v-240H600v240Zm0-480h160v-80H600v80ZM200-200h160v-80H200v80Zm160-320Zm240-160Zm0 240ZM360-280Z"/></svg>
+                <span>Comercials</span>
+                </a>
+            </li> -->
+            <li>
+                <a href="discography.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M400-240q50 0 85-35t35-85v-280h120v-80H460v256q-14-8-29-12t-31-4q-50 0-85 35t-35 85q0 50 35 85t85 35Zm80 160q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"/></svg>
+                    <span>Discography</span>
+                </a>
+            </li>
+            <li>
+                <a href="filmography.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="m160-800 80 160h120l-80-160h80l80 160h120l-80-160h80l80 160h120l-80-160h120q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800Zm0 240v320h640v-320H160Zm0 0v320-320Z"/></svg>
+                    <span>Filmography</span>
+                </a>
+            </li>
+            <li class="active">
+                <a href="shows.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="m160-800 80 160h120l-80-160h80l80 160h120l-80-160h80l80 160h120l-80-160h120q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800Zm0 240v320h640v-320H160Zm0 0v320-320Z"/></svg>
+                    <span>Shows</span>
+                </a>
+            </li>
+            <li>
+                <a href="calendar.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="m160-800 80 160h120l-80-160h80l80 160h120l-80-160h80l80 160h120l-80-160h120q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800Zm0 240v320h640v-320H160Zm0 0v320-320Z"/></svg>
+                    <span>Schedule</span>
+                </a>
+            </li>
+            <li>
+                <a href="live.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="m380-340 280-180-280-180v360Zm-60 220v-80H160q-33 0-56.5-23.5T80-280v-480q0-33 23.5-56.5T160-840h640q33 0 56.5 23.5T880-760v480q0 33-23.5 56.5T800-200H640v80H320ZM160-280h640v-480H160v480Zm0 0v-480 480Z"/></svg>
+                    <span>Live</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="container">
+            <!-- <h2>Shows</h2> -->
+
+            <section id="tv">
+                <h1 class="title">TV Shows</h1>
+                <div class="content-con">
+                    <div class="content-item"><a href="https://youtu.be/Z9gt1tmBaow" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/Z9gt1tmBaow/maxresdefault.jpg" alt><p class="video-title">TODAY SHOW</p></a></div>
+                    <div class="content-item"><a href="https://youtu.be/UrvJlT89JFc" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/UrvJlT89JFc/maxresdefault.jpg" alt><p class="video-title">Sound Check EP.73</p></a></div>
+                    
+                </div>
+            </section>
+
+            <section id="online">
+                <h1 class="title">Online Shows</h1>
+                <div class="content-con">
+                    <div class="content-item"><a href="https://youtu.be/f1_G1-xpTdk" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/f1_G1-xpTdk/maxresdefault.jpg" alt><p class="video-title">VOGUE CLASS</p></a></div>
+                    <div class="content-item"><a href="https://youtu.be/Iwj6oC9Dg8Q" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/Iwj6oC9Dg8Q/maxresdefault.jpg" alt><p class="video-title">MINT NEW FACE</p></a></div>
+                    <div class="content-item"><a href="https://youtu.be/qqFKQxHli8g" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/qqFKQxHli8g/maxresdefault.jpg" alt><p class="video-title">MINT NEW FACE</p></a></div>
+                    <div class="content-item"><a href="https://youtu.be/xB27HUQJJyM" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/xB27HUQJJyM/maxresdefault.jpg" alt><p class="video-title">DVI 🦋 We Relay - Balance Game</p></a></div>
+                    <div class="content-item"><a href="https://youtu.be/942KtOOGGp0" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/942KtOOGGp0/maxresdefault.jpg" alt><p class="video-title">DVI 🦋 We Relay - Random Speed Dance</p></a></div>
+                    <div class="content-item"><a href="https://youtu.be/1VXj-fHm4w0" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/1VXj-fHm4w0/maxresdefault.jpg" alt><p class="video-title">DVI 🦋 We Relay - Quick Question</p></a></div>
+                    <div class="content-item"><a href="https://youtu.be/s62VXkPQJ6U" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/s62VXkPQJ6U/maxresdefault.jpg" alt><p class="video-title">จ้าวจิ้น EP.12</p></a></div>
+                    <div class="content-item"><a href="https://youtu.be/dJ5IB-9gg0E" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/dJ5IB-9gg0E/maxresdefault.jpg" alt><p class="video-title">ดาราเดลี่บันเทิง WeekEND</p></a></div>
+                    <div class="content-item"><a href="https://youtu.be/GFjtdSg48EY" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/GFjtdSg48EY/maxresdefault.jpg" alt><p class="video-title">CANDY CHANNEL EP.26</p></a></div>
+                    <div class="content-item"><a href="https://youtu.be/jhLwl0QnGeg" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/jhLwl0QnGeg/maxresdefault.jpg" alt><p class="video-title">DVI 🦋 Sugar Play | EP.1 เมื่อไหร่เธอจะเข้าใจ</p></a></div>
+                    <div class="content-item"><a href="https://youtu.be/ojxd3KiofUI" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/ojxd3KiofUI/maxresdefault.jpg" alt><p class="video-title">DVI 🦋 Sugar Play | EP.2 ห่างกันไม่เท่าไรก็ SO SAD</p></a></div>
+                    <div class="content-item"><a href="https://youtu.be/t9IGIYFV7AE" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/t9IGIYFV7AE/maxresdefault.jpg" alt><p class="video-title">DVI 🦋 Sugar Play | EP.3 เธอไม่ต้องกังวลหรอก ทำไปตามที่ใจบอก</p></a></div>
+                    <div class="content-item"><a href="https://youtu.be/E_jXyS0A-dY" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/E_jXyS0A-dY/maxresdefault.jpg" alt><p class="video-title">DVI 🦋 Sugar Play | EP.4 I WANT YOU TO BE MY SUGAR</p></a></div>
+                    <div class="content-item"><a href="https://youtu.be/5wjD5_C3sCo" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/5wjD5_C3sCo/maxresdefault.jpg" alt><p class="video-title">CANDY CHANNEL #SHORTS</p></a></div>
+                    <div class="content-item"><a href="https://youtu.be/eQzsmqcZot8" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/eQzsmqcZot8/maxresdefault.jpg" alt><p class="video-title">CANDY CHANNEL EP.26 #SHORTS</p></a></div>
+                    <div class="content-item"><a href="https://youtu.be/HEOlNfziVs8" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/HEOlNfziVs8/maxresdefault.jpg" alt><p class="video-title">CANDY CHANNEL EP.26 #SHORTS</p></a></div>
+                    <div class="content-item"><a href="https://youtu.be/zvutHXfiwjU" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/zvutHXfiwjU/maxresdefault.jpg" alt><p class="video-title">DVI 🦋 Sugar Play [Uncut]</p></a></div>
+                    <div class="content-item"><a href="https://youtu.be/gIBF5Oi_uZI" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/gIBF5Oi_uZI/maxresdefault.jpg" alt><p class="video-title">#SanookAskBack EP.86</p></a></div>
+                    <div class="content-item"><a href="https://youtu.be/Zd9Qk5JMN0o" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/Zd9Qk5JMN0o/maxresdefault.jpg" alt><p class="video-title">สุดสัปดาห์</p></a></div>
+                    <div class="content-item"><a href="https://youtu.be/PASWr642gE0" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/PASWr642gE0/maxresdefault.jpg" alt><p class="video-title">DVI อะไรดี 🦋🎮 | EP.1 DVI เล่นซ่อนแอบ</p></a></div>
+                    <div class="content-item"><a href="https://youtu.be/ilzlIYot_Nw" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/ilzlIYot_Nw/maxresdefault.jpg" alt><p class="video-title">DVI อะไรดี 🦋🎮 | EP.2 DVI ตะลุยจ๊อดแฟร์</p></a></div>
+                    <div class="content-item"><a href="https://youtu.be/SFC7Ikobe94" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/SFC7Ikobe94/maxresdefault.jpg" alt><p class="video-title">DVI อะไรดี 🦋🎮 | EP.3 One Day With หมอตั๋ง</p></a></div>
+                    <div class="content-item"><a href="https://youtu.be/oL45yWHRO3o" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/oL45yWHRO3o/maxresdefault.jpg" alt><p class="video-title">DVI อะไรดี 🦋🎮 | EP.4 ศึกเชฟ DVI</p></a></div>
+                    <div class="content-item"><a href="https://youtu.be/12uiRFIEC-U" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/12uiRFIEC-U/maxresdefault.jpg" alt><p class="video-title">DVI อะไรดี 🦋🎮 | EP.5 DVI’S CLASSROOM</p></a></div>
+                    <div class="content-item"><a href="https://youtu.be/F_MJh-G9v54" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/F_MJh-G9v54/maxresdefault.jpg" alt><p class="video-title">DVI อะไรดี 🦋🎮 | EP.6 คำต้องห้าม</p></a></div>
+                    <div class="content-item"><a href="https://youtu.be/1-6BAaNGFDw" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/1-6BAaNGFDw/maxresdefault.jpg" alt><p class="video-title">DVI อะไรดี 🦋🎮 | EP.7 DVI ตะลุย Dream World Part 1</p></a></div>
+                    <div class="content-item"><a href="https://youtu.be/JmVnrGx9kqs" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/JmVnrGx9kqs/maxresdefault.jpg" alt><p class="video-title">DVI อะไรดี 🦋🎮 | EP.8 DVI ตะลุย Dream World Part 2</p></a></div>
+                    <div class="content-item"><a href="https://youtu.be/ubrsSGAYkMA" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/ubrsSGAYkMA/maxresdefault.jpg" alt><p class="video-title">‘Why DVI’ 🦋 EP.1 - How it Begins</p></a></div>
+                    <div class="content-item"><a href="https://youtu.be/4AiAOG8Xvrs" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/4AiAOG8Xvrs/maxresdefault.jpg" alt><p class="video-title">‘Why DVI’ 🦋 EP.2 - Dream And Evolution</p></a></div>
+                    <div class="content-item"><a href="https://youtu.be/xJP6eqM9qLs" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/xJP6eqM9qLs/maxresdefault.jpg" alt><p class="video-title">‘Why DVI’ 🦋 EP.3 - The Butterfly Effect</p></a></div>
+                    <div class="content-item"><a href="https://youtu.be/rjARP06BQPM" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/rjARP06BQPM/maxresdefault.jpg" alt><p class="video-title">‘Why DVI’ 🦋 EP.4 - No Second Death</p></a></div>
+                    <div class="content-item"><a href="https://youtu.be/F_Rh__fTGFU" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/F_Rh__fTGFU/maxresdefault.jpg" alt><p class="video-title">รอบวัน | ข่าววันบันเทิง</p></a></div>
+                    <div class="content-item"><a href="https://youtu.be/Sxfr-UGfgEY" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/Sxfr-UGfgEY/mqdefault.jpg" alt><p class="video-title">เรื่องเล่าเช้านี้ | 10 สิงหาคม 2566</p></a></div>
+                    <div class="content-item"><a href="https://youtu.be/A-UGhsrvW4Y" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/A-UGhsrvW4Y/maxresdefault.jpg" alt><p class="video-title">madanfun</p></a></div>
+                    <div class="content-item"><a href="https://www.youtube.com/live/jPHguNBAXrM" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/jPHguNBAXrM/maxresdefault.jpg" alt><p class="video-title">3Plus Greeting Live x DVI</p></a></div>
+                    <div class="content-item"><a href="https://youtu.be/Xbuf1WurcJ4" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/Xbuf1WurcJ4/maxresdefault.jpg" alt><p class="video-title">10 songs in your playlist with DVI</p></a></div>
+                    <div class="content-item"><a href="https://youtu.be/HHaOtKCgOoo" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/HHaOtKCgOoo/maxresdefault.jpg" alt><p class="video-title">SosatSeoulsay EP264 ฉากนั้น ฉากไหน?</p></a></div>
+                    <div class="content-item"><a href="https://youtu.be/yDeWjaKUyjo" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/yDeWjaKUyjo/maxresdefault.jpg" alt><p class="video-title">MAKE FRIENDS EXCLUSIVE INTERVIEW</p></a></div>
+                    <div class="content-item"><a href="https://youtu.be/3o1DUDcTSgI" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/3o1DUDcTSgI/maxresdefault.jpg" alt><p class="video-title">TODAY Play</p></a></div>
+                    <div class="content-item"><a href="https://youtu.be/JfeNoUAV-D8" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/JfeNoUAV-D8/maxresdefault.jpg" alt><p class="video-title">โตมาเป็น FULL EP.18</p></a></div>
+                    <div class="content-item"><a href="https://youtu.be/FaMLbEolDRo" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/FaMLbEolDRo/maxresdefault.jpg" alt><p class="video-title">จันทร์ไรจรรโลง EP14</p></a></div>
+
+                </div>
+            </section>
+
+            <section id="specials">
+                <h1 class="title">รายการพิเศษและคลิปสั้น</h1>
+                <div class="content-con">
+                    <div class="content-item"><a href="https://youtu.be/GRYmTAJR1DA" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/GRYmTAJR1DA/maxresdefault.jpg" alt><p class="video-title">ทำความรู้จักเด็กฝึกคนที่ 12 “ป๋อ”</p></a></div>
+                    <div class="content-item"><a href="https://youtu.be/NpSqMYBgnuM" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/NpSqMYBgnuM/maxresdefault.jpg" alt><p class="video-title">Vlog อะไรว้าาEp.1 ไปกินข้าวกับโคโดแมะ</p></a></div>
+                    <div class="content-item"><a href="https://youtu.be/oqP8ObxGtz8" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/oqP8ObxGtz8/maxresdefault.jpg" alt><p class="video-title">DVI 🦋 Room Tour in JAPAN !</p></a></div>
+                    <div class="content-item"><a href="https://youtu.be/eMalZoDEJMc" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/eMalZoDEJMc/maxresdefault.jpg" alt><p class="video-title">The Series Y TH</p></a></div>
+                    <div class="content-item"><a href="https://youtu.be/tSrlivONQKc" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/tSrlivONQKc/maxresdefault.jpg" alt><p class="video-title">เชื่อกูกูว่าสนุก</p></a></div>
+
+                </div>
+            </section>
+
+            <section id="bts">
+                <h1 class="title">Behind The Scenes</h1>
+                <div class="content-con">
+                    <div class="content-item"><a href="https://youtu.be/jYprLFRmPMw" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/jYprLFRmPMw/maxresdefault.jpg" alt><p class="video-title">🎸[ทำความรู้จัก] วง "Septave" วงที่ Cool ที่สุดใน Grammy Vocal Studio</p></a></div>
+                    <div class="content-item"><a href="https://youtu.be/X8lmj6mkv-M" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/X8lmj6mkv-M/maxresdefault.jpg" alt><p class="video-title">TRINITY & 4NOLOGUE TRAINEE - 'YESTERDAY TODAY TOMORROW' MV MAKING FILM</p></a></div>
+                    <div class="content-item"><a href="https://youtu.be/muS7VtHOeDs" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/muS7VtHOeDs/maxresdefault.jpg" alt><p class="video-title">DVI 🦋 Backstage  - OCTOPOP 2022</p></a></div>
+                    <div class="content-item"><a href="https://youtu.be/FHVKrZNhnd8" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/FHVKrZNhnd8/maxresdefault.jpg" alt><p class="video-title">DVI 🦋 Behind Champagne Poppin</p></a></div>
+                    <div class="content-item"><a href="https://youtu.be/gQalFC8B6gk" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/gQalFC8B6gk/maxresdefault.jpg" alt><p class="video-title">DVI 🦋 Backstage - Siam Music Fest 2022</p></a></div>
+                    <div class="content-item"><a href="https://youtu.be/NbK3R_Yim4g" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/NbK3R_Yim4g/maxresdefault.jpg" alt><p class="video-title">DVI VLOG 🦋 ตะลุย Dream World 🎢☃️</p></a></div>
+                    <div class="content-item"><a href="https://youtu.be/otrr7vLjyuc" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/otrr7vLjyuc/maxresdefault.jpg" alt><p class="video-title">DVI 🦋 Making of 'To The Top' - PSYCHICFEVERxDVI</p></a></div>
+                    <div class="content-item"><a href="https://youtu.be/ZoTNLqN4piY" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/ZoTNLqN4piY/maxresdefault.jpg" alt><p class="video-title">DVI 🦋 Making of ‘Sugar’ M/V</p></a></div>
+                    <div class="content-item"><a href="https://youtu.be/9578V_bGOzg" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/9578V_bGOzg/maxresdefault.jpg" alt><p class="video-title">DVI 🦋 Making of 'To The Top' M/V - PSYCHICFEVERxDVI</p></a></div>
+                    <div class="content-item"><a href="https://youtu.be/-V250Hba-C4" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/-V250Hba-C4/maxresdefault.jpg" alt><p class="video-title">DVI 🦋 Backstage - THE SURVIVAL 2023 THAILAND</p></a></div>
+                    <div class="content-item"><a href="https://youtu.be/KuemFv75VcU" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/KuemFv75VcU/maxresdefault.jpg" alt><p class="video-title">DVI 🦋 Making of ‘DEBUT STAGE’</p></a></div>
+                    <div class="content-item"><a href="https://youtu.be/VpTNsZPVcBc" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/VpTNsZPVcBc/maxresdefault.jpg" alt><p class="video-title">DVI 🦋 Backstage - VOGUE 10th Anniversary Fest</p></a></div>
+                    <div class="content-item"><a href="https://youtu.be/v-florrdE1M" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/v-florrdE1M/maxresdefault.jpg" alt><p class="video-title">DVI 🦋 Backstage - SUPERFLUID 2023</p></a></div>
+                    <div class="content-item"><a href="https://youtu.be/ECDnboHrSA0" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/ECDnboHrSA0/maxresdefault.jpg" alt><p class="video-title">DVI 🦋 ON STAGE - M LIFESTORE SUMMER CATION SONGKRAN FESTIVAL</p></a></div>
+                    <div class="content-item"><a href="https://youtu.be/YLnIUVv_iFk" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/YLnIUVv_iFk/maxresdefault.jpg" alt><p class="video-title">DVI 🦋 Backstage - PSYCHIC FEVER LIVE TOUR 2023 "P.C.F"</p></a></div>
+                    <div class="content-item"><a href="https://youtu.be/CLd8PfkKCDU" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/CLd8PfkKCDU/maxresdefault.jpg" alt><p class="video-title">DVI 🦋 Making of ‘Second Chance’ M/V</p></a></div>
+                    <div class="content-item"><a href="https://youtu.be/iXyjByOY1lI" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/iXyjByOY1lI/maxresdefault.jpg" alt><p class="video-title">DVI 🦋 Behind The Scene 'Second Chance' Self-Cam</p></a></div>
+                    <div class="content-item"><a href="https://youtu.be/DBVSJG2ijIg" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/DBVSJG2ijIg/maxresdefault.jpg" alt><p class="video-title">DVI 🦋 Backstage in Japan - BATTLE OF TOKYO 2023</p></a></div>
+                    <div class="content-item"><a href="https://youtu.be/Uno7de3MkLg" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/Uno7de3MkLg/maxresdefault.jpg" alt><p class="video-title">DVI 🦋 Backstage at 2023 TRINITY BREATH OF DESIRE CONCERT</p></a></div>
+                    <div class="content-item"><a href="https://youtu.be/JMH3i5Q2lfs" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/JMH3i5Q2lfs/maxresdefault.jpg" alt><p class="video-title">DVI 🦋 Backstage at OCTOPOP 2023</p></a></div>
+                    <div class="content-item"><a href="https://youtu.be/Pt8T5OaWsyc" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/Pt8T5OaWsyc/maxresdefault.jpg" alt><p class="video-title">DVI 🦋 at Siam Halloween 2023</p></a></div>
+                    <div class="content-item"><a href="https://youtu.be/aO1J-FrkWKE" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/aO1J-FrkWKE/maxresdefault.jpg" alt><p class="video-title">4NOLOGUE - SIAM MUSIC FEST 2023 [TRINITY DVI bXd]</p></a></div>
+                    <div class="content-item"><a href="https://youtu.be/Nv5SYStEOKY" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/Nv5SYStEOKY/maxresdefault.jpg" alt><p class="video-title">DVI 🦋 Making of ‘เพื่อน(แอบ)รัก - Close(d) Friend’ M/V</p></a></div>
+                    <div class="content-item"><a href="https://youtu.be/FDlhlNMjxrc" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/FDlhlNMjxrc/maxresdefault.jpg" alt><p class="video-title">DVI 🦋 Behind The Song ‘เพื่อน(แอบ)รัก - Close(d) Friend’</p></a></div>
+                    <div class="content-item"><a href="https://youtu.be/lDf-wEXtnBw" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/lDf-wEXtnBw/maxresdefault.jpg" alt><p class="video-title">Official Pilot Behind The Scenes | กี่หมื่นฟ้า | Your Sky Series</p></a></div>
+                    <div class="content-item"><a href="https://youtu.be/EYYbdGk7poo" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/EYYbdGk7poo/maxresdefault.jpg" alt><p class="video-title">บรรยากาศฟิตติ้ง กี่หมื่นฟ้า Your Sky Series</p></a></div>
+                    <div class="content-item"><a href="https://www.youtube.com/live/wkSbWrS3hxE" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/wkSbWrS3hxE/maxresdefault.jpg" alt><p class="video-title">Fitting กี่หมื่นฟ้า #FittingYourSkySeries</p></a></div>
+                    <div class="content-item"><a href="https://www.youtube.com/live/BfyyW_jQvns" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/BfyyW_jQvns/maxresdefault.jpg" alt><p class="video-title">บรรยากาศงานบวงสรวงซีรีส์กี่หมื่นฟ้า</p></a></div>
+                    <div class="content-item"><a href="https://youtu.be/brfh1SWHfa8" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/brfh1SWHfa8/maxresdefault.jpg" alt><p class="video-title">กี่หมื่นฟ้า Your Sky Series | Fitting Behind the scenes</p></a></div>
+                    <div class="content-item"><a href="https://youtu.be/miFjMkDzYkQ" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/miFjMkDzYkQ/maxresdefault.jpg" alt><p class="video-title">เบื้องหลังถ่ายแฟชั่นของ 15 ศิลปิน Gen 3 - 4 จากค่ายดูมันดิ / Praew And You Ep.21</p></a></div>
+                    <div class="content-item"><a href="https://youtu.be/L_UFCpkIi4M" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/L_UFCpkIi4M/maxresdefault.jpg" alt><p class="video-title">BTS | ชวนที่รัก ไปดูกี่หมื่นฟ้า | Your Sky Series</p></a></div>
+                    <div class="content-item"><a href="https://youtu.be/l6kbqEtkRS4" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/l6kbqEtkRS4/maxresdefault.jpg" alt><p class="video-title">BTS | กี่หมื่นฟ้า Your Sky Series EP.2</p></a></div>
+                    <div class="content-item"><a href="https://youtu.be/jVdRYQsAFHo" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/jVdRYQsAFHo/maxresdefault.jpg" alt><p class="video-title">BTS | กี่หมื่นฟ้า Your Sky Series EP.3</p></a></div>
+                    <div class="content-item"><a href="https://youtu.be/FDj-8TECRnA" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/FDj-8TECRnA/maxresdefault.jpg" alt><p class="video-title">BTS | กี่หมื่นฟ้า Your Sky Series EP.4</p></a></div>
+                    <div class="content-item"><a href="https://youtu.be/yUAtWAr-qB0" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/yUAtWAr-qB0/maxresdefault.jpg" alt><p class="video-title">BTS | กี่หมื่นฟ้า Your Sky Series EP.7</p></a></div>
+                    <div class="content-item"><a href="https://youtu.be/wxFCYqOAzwg" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/wxFCYqOAzwg/maxresdefault.jpg" alt><p class="video-title">BTS | กี่หมื่นฟ้า Your Sky Series EP.8</p></a></div>
+                    <div class="content-item"><a href="https://youtu.be/8gqajWEajq4" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/8gqajWEajq4/maxresdefault.jpg" alt><p class="video-title">BTS | กี่หมื่นฟ้า Your Sky Series EP.9</p></a></div>
+                    <div class="content-item"><a href="https://youtu.be/HrWflNXdY7M" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/HrWflNXdY7M/maxresdefault.jpg" alt><p class="video-title">BTS | กี่หมื่นฟ้า Your Sky Series EP.10</p></a></div>
+                    <div class="content-item"><a href="https://youtu.be/oYp8DWggeOg" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/oYp8DWggeOg/maxresdefault.jpg" alt><p class="video-title">BTS | กี่หมื่นฟ้า Your Sky Series EP.12 (Final EP)</p></a></div>
+                    <div class="content-item"><a href="https://youtu.be/oKWGkAjX2do" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/oKWGkAjX2do/maxresdefault.jpg" alt><p class="video-title">[ENG SUB] บุกกองถ่ายกี่หมื่นฟ้าอีกครั้ง | ผู้เพื่อนตุ๊ดvlog</p></a></div>
+                    <div class="content-item"><a href="https://youtu.be/qzHi6EsufbA" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/qzHi6EsufbA/maxresdefault.jpg" alt><p class="video-title">2nd Busking Your Sky Series | Behind The Scenes</p></a></div>
+
+                </div>
+            </section>
+
+            <section id="presstour">
+                <h1 class="title">Press Tours & Promotions</h1>
+                <div class="content-con">
+                    <div class="content-item"><a href="https://www.facebook.com/share/v/15o7YCnwqi/" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://pbs.twimg.com/media/FoXrO3laAAEgte9?format=jpg&name=4096x4096" alt><p class="video-title">Mellow POP</p></a></div>
+                    <div class="content-item"><a href="https://youtu.be/JUmKFKTD8O4" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/JUmKFKTD8O4/maxresdefault.jpg" alt><p class="video-title">Mellow Mission EP 83</p></a></div>
+                    <div class="content-item"><a href="https://www.youtube.com/live/OXOTk1S7uc0" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/OXOTk1S7uc0/maxresdefault.jpg" alt><p class="video-title">Flex Talk "Second Chance"</p></a></div>
+                    <div class="content-item"><a href="https://youtu.be/00zY45v5Jiw" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/00zY45v5Jiw/maxresdefault.jpg" alt><p class="video-title">รอบวัน 2024</p></a></div>
+                    <div class="content-item"><a href="https://www.youtube.com/live/lLRtFExgz90" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/lLRtFExgz90/maxresdefault.jpg" alt><p class="video-title">Flex Talk “เพื่อน(แอบ)รัก”</p></a></div>
+                    <div class="content-item"><a href="https://www.youtube.com/live/ZZx6x2nw3JQ" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/ZZx6x2nw3JQ/maxresdefault.jpg" alt><p class="video-title">MellowPOP Idol Play Room</p></a></div>
+                    <div class="content-item"><a href="https://www.youtube.com/live/2PRJiyH9DDU" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/2PRJiyH9DDU/maxresdefault.jpg" alt><p class="video-title">Flex Talk "กี่หมื่นฟ้า Your Sky Series"</p></a></div>
+                    <div class="content-item"><a href="https://www.youtube.com/live/Ez6-ESo1GXo" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/Ez6-ESo1GXo/maxresdefault.jpg" alt><p class="video-title">#EFMFandomlive | 5 ธันวาคม 67</p></a></div>
+
+                </div>
+            </section>
+
+            <section id="presscon">
+                <h1 class="title">Press Conferences & Premieres</h1>
+                <div class="content-con">
+                    <div class="content-item"><a href="https://www.youtube.com/live/A5CNHaheqZA" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/A5CNHaheqZA/maxresdefault.jpg" alt><p class="video-title">4LLOWEEN PARTY | KNOCK KNOCK WHO'S AT THE BLACK DOOR?</p></a></div>
+                    <div class="content-item"><a href="https://www.youtube.com/live/RbsS9PxEU4Y" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/RbsS9PxEU4Y/maxresdefault.jpg" alt><p class="video-title">DVI 1st Anniversary </p></a></div>
+                    <div class="content-item"><a href="https://www.youtube.com/live/4T3aQj7k8-k" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/4T3aQj7k8-k/maxresdefault.jpg" alt><p class="video-title">Countdown EP1 กี่หมื่นฟ้า</p></a></div>
+                    <div class="content-item"><a href="https://www.youtube.com/live/uC4Boe4Vlsw" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/uC4Boe4Vlsw/maxresdefault.jpg" alt><p class="video-title">Countdown EP8 กี่หมื่นฟ้า</p></a></div>
+                    <div class="content-item"><a href="https://www.youtube.com/live/pfzNkt5FJzQ&t=2960" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/pfzNkt5FJzQ/mqdefault.jpg" alt><p class="video-title">บรรยากาศการเดินพรมงาน DMD LINE UP 2025+ "GLOW UP"</p></a></div>
+                    <div class="content-item"><a href="https://www.youtube.com/live/kxEQvN8B6o0?si=OJrVz646x1eBtrmL&t=9634" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/kxEQvN8B6o0/maxresdefault.jpg" alt><p class="video-title">DMD LINE UP 2025+ "GLOW UP"</p></a></div>
+                
+                </div>
+            </section>
+
+            <section id="interview">
+                <h1 class="title">Interviews</h1>
+                <div class="content-con">
+                    <div class="content-item"><a href="https://youtu.be/ZK5CiEEVJ-E" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/ZK5CiEEVJ-E/maxresdefault.jpg" alt><p class="video-title">บวงสรวงซีรีส์กี่หมื่นฟ้า | Starlight YNews</p></a></div>
+                    <div class="content-item"><a href="https://youtu.be/y0WbVwDntEg" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/y0WbVwDntEg/maxresdefault.jpg" alt><p class="video-title">ลองมาดูกี่หมื่นฟ้านะที่รัก | Starlight YNews</p></a></div>
+                    <div class="content-item"><a href="https://youtu.be/2eiUvOSLTMc" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/2eiUvOSLTMc/maxresdefault.jpg" alt><p class="video-title">Y ENTERTAIN AWARDS 2024 | TripleClickTH</p></a></div>
+                    <div class="content-item"><a href="https://www.youtube.com/live/kGnnkACaP1g" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/kGnnkACaP1g/maxresdefault.jpg" alt><p class="video-title">Y universe I Hello Asian</p></a></div>
+                    <div class="content-item"><a href="https://youtu.be/K0Nr7Az_xeg" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/K0Nr7Az_xeg/maxresdefault.jpg" alt><p class="video-title">Your Sky Final EP. | Maya TV</p></a></div>
+                    <div class="content-item"><a href="https://www.youtube.com/live/jZQ8bnhhNKM" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/jZQ8bnhhNKM/maxresdefault.jpg" alt><p class="video-title">Mille Skin of New Gen I Hello Asian</p></a></div>
+                    <div class="content-item"><a href="https://www.youtube.com/live/AkrimRbU_GQ" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/AkrimRbU_GQ/maxresdefault.jpg" alt><p class="video-title">DMD LINE UP 2025+ "ด้วงกับเธอ" | Hello Asian</p></a></div>
+                    <div class="content-item"><a href="https://youtu.be/2wEvn0FLr08" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/2wEvn0FLr08/maxresdefault.jpg" alt><p class="video-title">THHeadline X YourSkySeries | Exclusive Interview</p></a></div>
+                    <div class="content-item"><a href="https://youtu.be/yI8yKlOO0lQ" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/yI8yKlOO0lQ/maxresdefault.jpg" alt><p class="video-title">Friendly Me | Hello Asian</p></a></div>
+                    <div class="content-item"><a href="https://youtu.be/ZuBjzBG4rJA" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/ZuBjzBG4rJA/maxresdefault.jpg" alt><p class="video-title">HOLO+FACE | ดูวนไป</p></a></div>
+                    <div class="content-item"><a href="https://www.youtube.com/live/Egwk_SIwy-I" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/Egwk_SIwy-I/maxresdefault.jpg" alt><p class="video-title">สัมภาษณ์ผู้บริหารและตี๋ตี๋ป๋อ #ITSSKINxTeeTeePor | Hello Asian</p></a></div>
+                    <div class="content-item"><a href="https://www.youtube.com/live/Cq_vqfBwADw" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/Cq_vqfBwADw/maxresdefault.jpg" alt><p class="video-title">#ITSSKINxTeeTeePor | Hello Asian</p></a></div>
+                    
+                </div>
+            </section>
+
+            <section id="reaction">
+                <h1 class="title">Reactions</h1>
+                <div class="content-con">
+                    <div class="content-item"><a href="https://youtu.be/WjW9wJ9Xsuk" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/WjW9wJ9Xsuk/maxresdefault.jpg" alt><p class="video-title">DVI 🦋 TRINITY - Champagne Poppin Official M/V Reaction</p></a></div>
+                    <div class="content-item"><a href="https://youtu.be/Q93P_CBc79s" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/Q93P_CBc79s/maxresdefault.jpg" alt><p class="video-title">DVI 🦋 'Sugar' Official M/V Reaction</p></a></div>
+                    <div class="content-item"><a href="https://youtu.be/zJJuHL1PajA" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/zJJuHL1PajA/maxresdefault.jpg" alt><p class="video-title">DVI 🦋 ‘เพื่อน (แอบ) รัก - Close(d) Friend’ Official M/V Reaction</p></a></div>
+                    <div class="content-item"><a href="https://youtu.be/mMZBrDlV4cQ" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/mMZBrDlV4cQ/maxresdefault.jpg" alt><p class="video-title">DVI ‘เพื่อน (แอบ) รัก - Close(d) Friend’ | #หนังหน้าโรงxDVI</p></a></div>
+                    <div class="content-item"><a href="https://youtu.be/ZsNwN4Pb1BA" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/ZsNwN4Pb1BA/maxresdefault.jpg" alt><p class="video-title">กี่หมื่นฟ้า Your Sky Series Official Pilot</p></a></div>
+                    <div class="content-item"><a href="https://youtu.be/iGPUlv9-g4g" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/iGPUlv9-g4g/maxresdefault.jpg" alt><p class="video-title">กี่หมื่นฟ้า Your Sky Series Official Trailer</p></a></div>
+                    <div class="content-item"><a href="https://youtu.be/jce5TMrb4i8" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/jce5TMrb4i8/maxresdefault.jpg" alt><p class="video-title">กี่หมื่นฟ้า Your Sky Series EP.1</p></a></div>
+                    <div class="content-item"><a href="https://youtu.be/LY9V65XZgmY" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/LY9V65XZgmY/maxresdefault.jpg" alt><p class="video-title">กี่หมื่นฟ้า Your Sky Series EP.2</p></a></div>
+                    <div class="content-item"><a href="https://youtu.be/Dq4s6nvSdPI" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/Dq4s6nvSdPI/maxresdefault.jpg" alt><p class="video-title">กี่หมื่นฟ้า Your Sky Series EP.4</p></a></div>
+                    <div class="content-item"><a href="https://youtu.be/cJnU_fJJh8o" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/cJnU_fJJh8o/maxresdefault.jpg" alt><p class="video-title">กี่หมื่นฟ้า Your Sky Series EP.6</p></a></div>
+                    <div class="content-item"><a href="https://youtu.be/wu4M2FzKJfk" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/wu4M2FzKJfk/maxresdefault.jpg" alt><p class="video-title">กี่หมื่นฟ้า Your Sky Series EP.8</p></a></div>
+                    <div class="content-item"><a href="https://youtu.be/UGhZfFa5A4s" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/UGhZfFa5A4s/maxresdefault.jpg" alt><p class="video-title">กี่หมื่นฟ้า Your Sky Series EP.10 | หนังหน้าโรง</p></a></div>
+                    <div class="content-item"><a href="https://youtu.be/7ZhnNUnKwIY" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/7ZhnNUnKwIY/maxresdefault.jpg" alt><p class="video-title">กี่หมื่นฟ้า Your Sky Series EP.10</p></a></div>
+                    <div class="content-item"><a href="https://youtu.be/5KNV17EPNy4" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/5KNV17EPNy4/maxresdefault.jpg" alt><p class="video-title">กี่หมื่นฟ้า Your Sky Series EP.12  (Final EP)</p></a></div>
+                    <div class="content-item"><a href="https://youtu.be/UqHmVecyA1U" target="_blank" rel="noopener noreferrer"><img class="thumbnail" src="https://img.youtube.com/vi/UqHmVecyA1U/maxresdefault.jpg" alt><p class="video-title">กี่หมื่นฟ้า Your Sky Series EP.12  (Final EP) | เม้นท์ก่อนเข้านอน</p></a></div>
+
+                </div>
+            </section>
+        </div>
+
+        <div id="footer-container"></div>
+
+    </main>
+    
+</body>
+</html>
